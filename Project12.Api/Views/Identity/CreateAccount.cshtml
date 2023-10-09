@@ -1,0 +1,31 @@
+﻿@model Project12.Services.Models.Users.UserRegistrationModel
+
+@{
+    ViewData["Title"] = "CreateAccount";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="text-center">
+    <div>
+        <h3>Регистрационна форма</h3>
+    </div>
+
+    <form asp-controller="Identity" asp-action="CreateAccount">
+        <div>
+            <input asp-for="Username" type="text" placeholder="Потребителско име" autocomplete="off" />
+        </div>
+        <div>
+            <input asp-for="Password" type="password" placeholder="Парола" />
+        </div>
+        <div>
+            <input asp-for="RepeatPassword" type="password" placeholder="Повтори парола" />
+        </div>
+        <div>
+            <input asp-for="Email" type="email" placeholder="Имейл" />
+        </div>
+
+        <div>
+            <button type="submit">Регистрация</button>
+        </div>
+    </form>
+</div>

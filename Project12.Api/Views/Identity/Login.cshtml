@@ -1,0 +1,30 @@
+﻿@model Project12.Services.Models.Users.UserLoginModel
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="text-center">
+    <div>
+        <h3>Вход</h3>
+    </div>
+    
+    <form asp-controller="Identity" asp-action="Login">
+        <div>
+            <input asp-for="Username" type="text" placeholder="Потребителско име" autocomplete="off" />
+        </div>
+        <div>
+            <input asp-for="Password" type="password" placeholder="Парола" />
+        </div>
+
+        <div>
+            <button type="submit">Вход</button>
+        </div>
+        <div>
+            <a href="@this.Url.Action("SignUp", "Identity")">
+                Регистрация
+            </a>
+        </div>
+    </form>
+</div>
