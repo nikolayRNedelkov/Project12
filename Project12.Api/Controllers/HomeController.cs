@@ -6,7 +6,7 @@ namespace Project12.Api.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return this.View();
         }
     }
 }

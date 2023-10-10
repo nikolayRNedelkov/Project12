@@ -63,7 +63,6 @@ namespace Project12.Api.Controllers
             return this.RedirectToAction("Index", "Home");
         }
 
-        [Authorize]
         public async Task<IActionResult> Logout()
         {
             await this.signInManager.SignOutAsync();
